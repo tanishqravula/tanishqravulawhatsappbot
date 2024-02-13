@@ -1,2 +1,11 @@
 flask
 python-dotenv
+requests
+openai
+jsonlib
+aiohttp
+asyncio
+logging
+google-generativeai
+hashlib
+hmac
