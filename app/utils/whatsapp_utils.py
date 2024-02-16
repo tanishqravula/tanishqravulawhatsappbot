@@ -2,6 +2,12 @@ import logging
 from flask import current_app, jsonify
 import json
 import requests
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+import textwrap
+from bs4 import BeautifulSoup
+import base64 
+import PIL.Image
 import google.generativeai as genai
 # from app.services.openai_service import generate_response
 import re
@@ -22,6 +28,43 @@ def generate_content(model_type, content):
 genai.configure(api_key=GOOGLE_API_KEY)
 
 model = load_model()
+def generate_pdf_summary(summary_text):
+    # Create a PDF file
+    pdf_filename = "summary.pdf"
+    c = canvas.Canvas(pdf_filename, pagesize=letter)
+
+    # Set the font and size for the PDF content
+    c.setFont("Helvetica", 12)
+    heading = ""
+
+    # Initialize variables for the first page
+    text_lines = textwrap.wrap(summary_text, width=70)
+
+    # Add the heading to the first page
+    c.drawString(50, 750, heading)
+
+    y_position = 730
+    for line in text_lines:
+        # Check the remaining space on the current page
+        remaining_space = y_position - 50
+
+        if remaining_space < 15:
+            # Start a new page if the remaining space is not enough for a new line
+            c.showPage()
+            y_position = 780  # Adjust for new page
+
+            # Add the heading to the new page
+            c.drawString(50, 750,"")
+
+        c.drawString(50, y_position, line)
+        y_position -= 15  # Adjust for line spacing
+
+    # Save the PDF
+    c.showPage()
+    c.save()
+
+    return pdf_filename
+
 
 
 
@@ -51,6 +94,11 @@ def generate_response(response):
         return "Tanishq Ravula"
     if "invented" in response and "you" in response and "tube" not in response and "com" not in response:
         return "Tanishq Ravula"
+    if "pdf" in response or "Pdf" in response or "PDF" in response or "pDf" in response or "pdF" in response:
+        summary = generate_content("gemini-pro",response)
+        pdf_filename = generate_pdf_summary(summary)
+        return get_binary_file_downloader_html(pdf_filename, file_label="Download PDF")
+        
     
     return generate_content("gemini-pro",response)
 
