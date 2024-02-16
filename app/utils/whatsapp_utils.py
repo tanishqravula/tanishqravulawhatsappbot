@@ -95,29 +95,29 @@ def get_text_message_input(recipient, text):
 def generate_response(response):
     response=response.lower()
     # Return text in uppercase
-    if "created" in response and "you" in response and "tube" not in response and "com" not in response and 'i' not in response and len(response)<=30:
+    if "created" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
-    if "developed" in response and "you" in response and "tube" not in response and "com" not in response and 'i' not in response and len(response)<=30:
+    if "developed" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
-    if "invented" in response and "you" in response and "tube" not in response and "com" not in response and 'i' not in response and len(response)<=30:
+    if "invented" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
-    if "created" in response and "u" in response and "tube" not in response and "com" not in response and 'i' not in response and len(response)<=30:
+    if "created" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
-    if "developed" in response and "u" in response and "tube" not in response and "com" not in response and 'i' not in response and len(response)<=30:
+    if "developed" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
-    if "invented" in response and "u" in response and "tube" not in response and "com" not in response and 'i' not in response and len(response)<=30:
+    if "invented" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
-    if "create" in response and "you" in response and "tube" not in response and "com" not in response and 'i' not in response and len(response)<=30:
+    if "create" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
-    if "develop" in response and "you" in response and "tube" not in response and "com" not in response and  'i' not in response and len(response)<=30:
+    if "develop" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
-    if "invent" in response and "you" in response and "tube" not in response and "com" not in response and 'i' not in response and len(response)<=30:
+    if "invent" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
-    if "create" in response and "u" in response and "tube" not in response and "com" not in response and 'i' not in response and len(response)<=30:
+    if "create" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
-    if "develop" in response and "u" in response and "tube" not in response and "com" not in response and 'i' not in response and len(response)<=30:
+    if "develop" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
-    if "invent" in response and "u" in response and "tube" not in response and "com" not in response and 'i' not in response and len(response)<=30:
+    if "invent" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
     
         
