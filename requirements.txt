@@ -6,3 +6,8 @@ aiohttp
 asyncio
 logging
 google-generativeai
+reportlab
+textwrap3
+pybase64
+Pillow
+beautifulsoup4
