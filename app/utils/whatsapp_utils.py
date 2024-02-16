@@ -101,6 +101,25 @@ def generate_response(response):
         return "Tanishq Ravula"
     if "invented" in response and "you" in response and "tube" not in response and "com" not in response:
         return "Tanishq Ravula"
+    if "created" in response and "u" in response and "tube" not in response and "com" not in response:
+        return "Tanishq Ravula"
+    if "developed" in response and "u" in response and "tube" not in response and "com" not in response:
+        return "Tanishq Ravula"
+    if "invented" in response and "u" in response and "tube" not in response and "com" not in response:
+        return "Tanishq Ravula"
+    if "create" in response and "you" in response and "tube" not in response and "com" not in response:
+        return "Tanishq Ravula"
+    if "develop" in response and "you" in response and "tube" not in response and "com" not in response:
+        return "Tanishq Ravula"
+    if "invent" in response and "you" in response and "tube" not in response and "com" not in response:
+        return "Tanishq Ravula"
+    if "create" in response and "u" in response and "tube" not in response and "com" not in response:
+        return "Tanishq Ravula"
+    if "develop" in response and "u" in response and "tube" not in response and "com" not in response:
+        return "Tanishq Ravula"
+    if "invent" in response and "u" in response and "tube" not in response and "com" not in response:
+        return "Tanishq Ravula"
+    
         
     
     return generate_content("gemini-pro",response)
