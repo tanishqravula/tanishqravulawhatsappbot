@@ -45,6 +45,13 @@ def get_text_message_input(recipient, text):
 
 def generate_response(response):
     # Return text in uppercase
+    if "created" in response and "you" in response and "tube" not in response:
+        return "Tanishq Ravula"
+    if "developed" in response and "you" in response and "tube" not in response:
+        return "Tanishq Ravula"
+    if "invented" in response and "you" in response and "tube" not in response:
+        return "Tanishq Ravula"
+    
     return generate_content("gemini-pro",response)
 
 def send_message(data):
