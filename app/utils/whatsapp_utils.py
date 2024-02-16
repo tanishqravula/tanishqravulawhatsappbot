@@ -100,16 +100,6 @@ def generate_response(response):
         return "Tanishq Ravula"
     if "invented" in response and "you" in response and "tube" not in response and "com" not in response:
         return "Tanishq Ravula"
-    if "pdf" in response or "Pdf" in response or "PDF" in response or "pDf" in response or "pdF" in response:
-        response=response.replace("pdf","")
-        response=response.replace("Pdf","")
-        response=response.replace("pDf","")
-        response=response.replace("pdF","")
-        response=response.replace("PDF","")
-        
-        summary = generate_content("gemini-pro",response)
-        pdf_filename = generate_pdf_summary(summary)
-        return get_binary_file_downloader_html(pdf_filename, file_label="Download PDF")
         
     
     return generate_content("gemini-pro",response)
