@@ -93,6 +93,7 @@ def get_text_message_input(recipient, text):
 
 
 def generate_response(response):
+    response=response.lower()
     # Return text in uppercase
     if "created" in response and "you" in response and "tube" not in response and "com" not in response:
         return "Tanishq Ravula"
