@@ -11,3 +11,4 @@ textwrap3
 pybase64
 Pillow
 beautifulsoup4
+yt-dlp
