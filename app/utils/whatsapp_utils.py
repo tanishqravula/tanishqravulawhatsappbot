@@ -11,7 +11,45 @@ import PIL.Image
 import google.generativeai as genai
 # from app.services.openai_service import generate_response
 import re
+import yt_dlp
 GOOGLE_API_KEY='AIzaSyAHoNfvJhI4SwWqC75VfLS33mueiK23g2w'
+google_api_key = "AIzaSyDkd8FH7Un6h68wnzw-PdBkCbCynmlOhyU"
+search_engine_id = "94a9058e786854003"
+def search_google_images(query):
+    search_url = "https://www.googleapis.com/customsearch/v1"
+    params = {
+        "q": query,
+        "cx": search_engine_id,
+        "num": 10,  # Number of images to fetch
+        "searchType": "image",
+        "key": google_api_key
+    }
+    response = requests.get(search_url, params=params)
+    return response.json()
+def create_design(topic):
+    if topic:
+        image_urls=[]
+        results = search_google_images(topic)
+        for item in results.get('items', []):
+            image_url = item['link']
+            image_urls.append(image_url)
+    return image_urls
+def youtubevideo(search_query):
+    if search_query :
+        try:
+            ydl_opts = {
+                'format': 'best',
+                'quiet': True, }
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                if search_query.isdigit():
+                    video_url = f'https://www.youtube.com/watch?v={search_query}'
+                else:
+                    info_dict = ydl.extract_info(f"ytsearch:{search_query}", download=False)
+                    video_url = info_dict['entries'][0]['url']
+                    return video_url
+        except Exception as e:
+            return f"An error occurred: {e}"
+
 def load_model() -> genai.GenerativeModel:
     """
     The function load_model() returns an instance of the genai.GenerativeModel class initialized with the model name
@@ -94,6 +132,7 @@ def get_text_message_input(recipient, text):
 
 def generate_response(response):
     response=response.lower()
+    user_input=response
     # Return text in uppercase
     if "created" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
@@ -127,6 +166,31 @@ def generate_response(response):
         return "I was created by Tanishq Ravula"
     if "train" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
+    if "image" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
+        return create_design(user_input)
+    if "picture" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
+        return create_design(user_input)
+    if "images" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
+        return create_design(user_input)
+    if "pictures" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
+        return create_design(user_input)
+     if "photo" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
+        return create_design(user_input)
+    if "photos" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
+        return create_design(user_input)
+    if "video" in user_input.lower() and "document" not in user_input.lower():
+        return youtubevideo(user_input)
+    if "videos" in user_input.lower() and "document" not in user_input.lower():
+        return youtubevideo(user_input)
+    if "youtube" in user_input.lower() and "document" not in user_input.lower() and "link" in user_input:
+        return youtubevideo(user_input)
+    if "youtube" in user_input.lower() and "document" not in user_input.lower() and "links" in user_input:
+        return youtubevideo(user_input)
+    if "youtubes" in user_input.lower() and "document" not in user_input.lower() and "link" in user_input:
+        return youtubevideo(user_input)
+    if "youtube" in user_input.lower() and "document" not in user_input.lower() and "links" in user_input:
+        return youtubevideo(user_input)
+    
     
         
     
