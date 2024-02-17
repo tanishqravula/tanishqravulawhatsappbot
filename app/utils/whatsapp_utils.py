@@ -174,7 +174,7 @@ def generate_response(response):
         return create_design(user_input)
     if "pictures" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
         return create_design(user_input)
-     if "photo" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
+    if "photo" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
         return create_design(user_input)
     if "photos" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
         return create_design(user_input)
