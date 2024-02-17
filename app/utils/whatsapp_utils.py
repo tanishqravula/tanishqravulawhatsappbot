@@ -119,6 +119,14 @@ def generate_response(response):
         return "I was created by Tanishq Ravula"
     if "invent" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
         return "I was created by Tanishq Ravula"
+    if "trained" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+        return "I was created by Tanishq Ravula"
+    if "trained" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+        return "I was created by Tanishq Ravula"
+    if "train" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+        return "I was created by Tanishq Ravula"
+    if "train" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+        return "I was created by Tanishq Ravula"
     
         
     
