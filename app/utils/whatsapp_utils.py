@@ -130,7 +130,7 @@ def generate_response(response):
     
         
     
-    return generate_content("gemini-pro",response)
+    return generate_content("gemini-pro-vision",response)
 
 def send_message(data):
     headers = {
