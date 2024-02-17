@@ -18,7 +18,7 @@ def load_model() -> genai.GenerativeModel:
     'gemini-pro'.
     :return: an instance of the genai.GenerativeModel class.
     """
-    model = genai.GenerativeModel('gemini-pro-vision')
+    model = genai.GenerativeModel('gemini-pro')
     return model
 def generate_content(model_type, content):
     model = genai.GenerativeModel(model_type)
@@ -130,7 +130,7 @@ def generate_response(response):
     
         
     
-    return generate_content("gemini-pro-vision",response)
+    return generate_content("gemini-pro",response)
 
 def send_message(data):
     headers = {
