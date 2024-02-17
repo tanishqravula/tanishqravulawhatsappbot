@@ -33,7 +33,10 @@ def create_design(topic):
         for item in results.get('items', []):
             image_url = item['link']
             image_urls.append(image_url)
-    return image_urls
+    message_body=''
+    for url in image_urls:
+        message_body += f"• {url}\n"
+    return message_body
 def youtubevideo(search_query):
     if search_query :
         try:
