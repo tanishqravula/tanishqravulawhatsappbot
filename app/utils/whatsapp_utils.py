@@ -12,6 +12,44 @@ import google.generativeai as genai
 # from app.services.openai_service import generate_response
 import re
 import yt_dlp
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+
+# Function to authenticate with the YouTube Data API
+def authenticate(api_key):
+    api_service_name = "youtube"
+    api_version = "v3"
+    youtube = build(api_service_name, api_version, developerKey=api_key)
+    return youtube
+
+# Function to search for videos using the YouTube Data API
+def search_videos(query, youtube):
+    request = youtube.search().list(
+        q=query,
+        type="video",
+        part="snippet",
+        maxResults=30  # You can adjust the number of results as needed
+    )
+    response = request.execute()
+    return response.get("items", [])
+
+# Function to get details of a particular video by video ID
+def get_video_details(video_id, youtube):
+    request = youtube.videos().list(
+        part="snippet,contentDetails",
+        id=video_id
+    )
+    response = request.execute()
+    return response.get("items", [])
+
+# Function to get details of a particular playlist by playlist ID
+def get_playlist_details(playlist_id, youtube):
+    request = youtube.playlists().list(
+        part="snippet,contentDetails",
+        id=playlist_id
+    )
+    response = request.execute()
+    return response.get("items", [])
 GOOGLE_API_KEY='AIzaSyAHoNfvJhI4SwWqC75VfLS33mueiK23g2w'
 google_api_key = "AIzaSyDkd8FH7Un6h68wnzw-PdBkCbCynmlOhyU"
 search_engine_id = "94a9058e786854003"
@@ -52,6 +90,21 @@ def youtubevideo(search_query):
                     return video_url
         except Exception as e:
             return f"An error occurred: {e}"
+def youtubelinks(query):
+    api_key = "AIzaSyB77KnDlzZgt1yT8BS2TbiewH2w_f1lh0Y"
+    youtube = authenticate(api_key)
+    videos = search_videos(query, youtube)
+    message_body=''
+    if videos:
+        for video in videos:
+            video_details = get_video_details(video['id']['videoId'], youtube)
+            if video_details:
+                if 'playlistId' in video['id']:
+                    playlist_details = get_playlist_details(video['id']['playlistId'], youtube)
+                message_body+=f"•https://www.youtube.com/watch?v={video['id']['videoId']}\n"
+            else:
+                message_body+='no video found based on your query'
+    return message_body
 
 def load_model() -> genai.GenerativeModel:
     """
@@ -184,15 +237,15 @@ def generate_response(response):
     if "video" in user_input.lower() and "document" not in user_input.lower():
         return youtubevideo(user_input)
     if "videos" in user_input.lower() and "document" not in user_input.lower():
-        return youtubevideo(user_input)
+        return youtubelinks(user_input)
     if "youtube" in user_input.lower() and "document" not in user_input.lower() and "link" in user_input:
-        return youtubevideo(user_input)
+        return youtubelinks(user_input)
     if "youtube" in user_input.lower() and "document" not in user_input.lower() and "links" in user_input:
-        return youtubevideo(user_input)
+        return youtubelinks(user_input)
     if "youtubes" in user_input.lower() and "document" not in user_input.lower() and "link" in user_input:
-        return youtubevideo(user_input)
+        return youtubelinks(user_input)
     if "youtube" in user_input.lower() and "document" not in user_input.lower() and "links" in user_input:
-        return youtubevideo(user_input)
+        return youtubelinks(user_input)
     
     
         
