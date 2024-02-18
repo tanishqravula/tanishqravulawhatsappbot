@@ -235,7 +235,7 @@ def generate_response(response):
     if "photos" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
         return create_design(user_input)
     if "video" in user_input.lower() and "document" not in user_input.lower():
-        return youtubevideo(user_input)
+        return youtubelinks(user_input)
     if "videos" in user_input.lower() and "document" not in user_input.lower():
         return youtubelinks(user_input)
     if "youtube" in user_input.lower() and "document" not in user_input.lower() and "link" in user_input:
