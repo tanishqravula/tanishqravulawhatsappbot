@@ -12,3 +12,5 @@ pybase64
 Pillow
 beautifulsoup4
 yt-dlp
+google-oauth2-tool
+google-api-python-client
