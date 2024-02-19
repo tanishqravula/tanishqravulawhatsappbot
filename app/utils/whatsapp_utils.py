@@ -222,19 +222,19 @@ def generate_response(response):
         return "I was created by Tanishq Ravula"
     if "train" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "image" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower():
+    if "image" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower() and "process" not in user_input.lower():
         return create_design(user_input)
-    if "picture" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower():
+    if "picture" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower() and "process" not in user_input.lower():
         return create_design(user_input)
     if "images" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
         return create_design(user_input)
     if "pictures" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
         return create_design(user_input)
-    if "photo" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower():
+    if "photo" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower() and "process" not in user_input.lower():
         return create_design(user_input)
     if "photos" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
         return create_design(user_input)
-    if "video" in user_input.lower() and "document" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower():
+    if "video" in user_input.lower() and "document" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower() and "process" not in user_input.lower():
         return youtubelinks(user_input)
     if "videos" in user_input.lower() and "document" not in user_input.lower():
         return youtubelinks(user_input)
