@@ -190,51 +190,51 @@ def generate_response(response):
     response=response.lower()
     user_input=response
     # Return text in uppercase
-    if "created" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "created" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "developed" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "developed" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "invented" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "invented" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "created" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "created" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "developed" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "developed" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "invented" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "invented" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "create" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "create" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "develop" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "develop" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "invent" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "invent" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "create" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "create" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "develop" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "develop" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "invent" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "invent" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "trained" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "trained" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "trained" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "trained" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "train" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "train" in response and "you" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "train" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30:
+    if "train" in response and "u" in response and "tube" not in response and "com" not in response  and len(response)<=30 and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower()and "model" not in user_input.lower():
         return "I was created by Tanishq Ravula"
-    if "image" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower():
+    if "image" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower():
         return create_design(user_input)
-    if "picture" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
+    if "picture" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower():
         return create_design(user_input)
     if "images" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
         return create_design(user_input)
     if "pictures" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
         return create_design(user_input)
-    if "photo" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
+    if "photo" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower():
         return create_design(user_input)
     if "photos" in user_input.lower() and "video" not in user_input.lower() and "document" not in user_input.lower():
         return create_design(user_input)
-    if "video" in user_input.lower() and "document" not in user_input.lower():
+    if "video" in user_input.lower() and "document" not in user_input.lower() and "document" not in user_input.lower() and "module" not in user_input.lower() and "processing" not in user_input.lower() and "recognition" not in user_input.lower() and "model" not in user_input.lower():
         return youtubelinks(user_input)
     if "videos" in user_input.lower() and "document" not in user_input.lower():
         return youtubelinks(user_input)
