@@ -238,13 +238,13 @@ def generate_response(response):
         return youtubelinks(user_input)
     if "videos" in user_input.lower() and  "write" not in user_input.lower() and "document" not in user_input.lower()  and "calculate" not in user_input.lower() and "find" not in user_input.lower() and "obtain" not in user_input.lower() and "determine" not in user_input.lower() and "perform" not in user_input.lower() and "give" not in user_input.lower() and "resolution" not in user_input.lower() and "convolution" not in user_input.lower() and "how" not in user_input.lower() and "what" not in user_input.lower() and "why" not in user_input.lower() and "video" not in user_input.lower() and "respond" not in user_input.lower() and "generating" not in user_input.lower() and "document" not in user_input.lower() and "train" not in user_input.lower() and "create" not in user_input.lower() and "develop" not in user_input.lower() and "test" not in user_input.lower()and "visualise" not in user_input.lower() and "visualize" not in user_input.lower() and "visualization" not in user_input.lower() and "visualisation" not in user_input.lower():
         return youtubelinks(user_input)
-    if "youtube" in user_input.lower() and "document" not in user_input.lower() and "link" in user_input:
+    if "youtube" in user_input.lower() and "link" in user_input:
         return youtubelinks(user_input)
-    if "youtube" in user_input.lower() and "document" not in user_input.lower() and "links" in user_input:
+    if "youtube" in user_input.lower()  and "links" in user_input:
         return youtubelinks(user_input)
-    if "youtubes" in user_input.lower() and "document" not in user_input.lower() and "link" in user_input:
+    if "youtubes" in user_input.lower()  and "link" in user_input:
         return youtubelinks(user_input)
-    if "youtube" in user_input.lower() and "document" not in user_input.lower() and "links" in user_input:
+    if "youtube" in user_input.lower()  and "links" in user_input:
         return youtubelinks(user_input)
     
     
