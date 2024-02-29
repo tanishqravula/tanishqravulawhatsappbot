@@ -246,6 +246,8 @@ def generate_response(response):
         return youtubelinks(user_input)
     if "youtube" in user_input.lower() and "document" not in user_input.lower()  and "links" in user_input:
         return youtubelinks(user_input)
+    if "who created u" in user_input.lower() or "who create u" in user_input.lower() or "who developed u" in user_input.lower() or "who develop u" in user_input.lower() or "who invented u" in user_input.lower() or "who invent u" in user_input.lower():
+        return "I was created by Tanishq Ravula"
     
     
         
