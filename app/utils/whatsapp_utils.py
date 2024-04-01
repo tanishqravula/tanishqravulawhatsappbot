@@ -119,7 +119,6 @@ def generate_content(model_type, content):
     response = model.generate_content(content)
     k=response.text
     k=k.replace('*','')
-    k=k.replace('#','')
     return k
 
 genai.configure(api_key=GOOGLE_API_KEY)
