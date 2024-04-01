@@ -117,7 +117,10 @@ def load_model() -> genai.GenerativeModel:
 def generate_content(model_type, content):
     model = genai.GenerativeModel(model_type)
     response = model.generate_content(content)
-    return response.text
+    k=response.text
+    k=k.replace('*','')
+    k=k.replace('#','')
+    return k
 
 genai.configure(api_key=GOOGLE_API_KEY)
 
