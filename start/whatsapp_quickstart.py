@@ -99,6 +99,6 @@ async def send_messages_to_recipients_async(recipients, message):
         tasks.append(send_message_async(data))
     await asyncio.gather(*tasks)
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(send_messages_to_recipients_async(recipients, message))
-loop.close()
+#loop = asyncio.get_event_loop()
+#loop.run_until_complete(send_messages_to_recipients_async(recipients, message))
+#loop.close()
