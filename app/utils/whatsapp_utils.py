@@ -112,7 +112,7 @@ def load_model() -> genai.GenerativeModel:
     'gemini-pro'.
     :return: an instance of the genai.GenerativeModel class.
     """
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-1.5-pro')
     return model
 def generate_content(model_type, content):
     model = genai.GenerativeModel(model_type)
