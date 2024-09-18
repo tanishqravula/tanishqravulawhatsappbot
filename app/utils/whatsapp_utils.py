@@ -252,7 +252,7 @@ def generate_response(response):
     
         
     
-    return generate_content("gemini-1.5-flash",response)
+    return generate_content("gemini-pro",response)
 
 def send_message(data):
     headers = {
