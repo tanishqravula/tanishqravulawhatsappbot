@@ -252,7 +252,7 @@ def generate_response(response):
     
         
     
-    return generate_content("gemini-pro",response)
+    return generate_content("gemini-1.0-pro",response)
 
 def send_message(data):
     headers = {
