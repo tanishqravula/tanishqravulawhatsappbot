@@ -50,7 +50,7 @@ def get_playlist_details(playlist_id, youtube):
     )
     response = request.execute()
     return response.get("items", [])
-GOOGLE_API_KEY='AIzaSyAHoNfvJhI4SwWqC75VfLS33mueiK23g2w'
+GOOGLE_API_KEY='AIzaSyCr9S7aIXWoYOIzDJZ5Tt9Pc3fF02oqpKA'
 google_api_key = "AIzaSyDkd8FH7Un6h68wnzw-PdBkCbCynmlOhyU"
 search_engine_id = "94a9058e786854003"
 def search_google_images(query):
